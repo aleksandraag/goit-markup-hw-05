@@ -94,11 +94,10 @@ body {
   color: var(--main-text-color);
   margin-left: auto;
 }
-.menu a:hover {
-  color: var(--button-backgroundnhover-color);
-}
+.menu a:hover,
 .menu a:focus {
   color: var(--button-backgroundnhover-color);
+  transition: 250ms;
 }
 
 .contact-header {
@@ -115,11 +114,10 @@ body {
   color: var(--contactncontent-text-color);
 }
 
-.contact-header a:hover {
-  color: var(--button-backgroundnhover-color);
-}
+.contact-header a:hover,
 .contact-header a:focus {
   color: var(--button-backgroundnhover-color);
+  transition: 250ms;
 }
 
 .headline-line {
@@ -179,13 +177,11 @@ body {
   color: var(--button-text-color);
 }
 
-.main-button:hover {
-  background-color: var(--button-backgroundnhover-color);
-  color: var(--button-text-color);
-}
+.main-button:hover,
 .main-button:focus {
   background-color: var(--button-backgroundnhover-color);
   color: var(--button-text-color);
+  transition: 250ms;
 }
 
 /* Lorem */
@@ -327,6 +323,7 @@ button:focus {
   color: var(--button-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: 250ms;
 }
 .main {
   background-color: white;
@@ -390,9 +387,11 @@ button:focus {
   padding: 0%;
 }
 
-.card-img:hover {
+.card-img:hover,
+.card-img:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: 250ms;
 }
 
 img {
@@ -422,6 +421,7 @@ img {
 .contact-icon:focus .smartphone {
   color: var(--button-backgroundnhover-color);
   fill: var(--button-backgroundnhover-color);
+  transition: 250ms;
 }
 
 .lorem-icon-box {
@@ -453,6 +453,7 @@ img {
 .team-social-link:focus {
   background-color: var(--button-backgroundnhover-color);
   fill: var(--button-text-color);
+  transition: 250ms;
 }
 
 .our-clients {
@@ -479,6 +480,7 @@ img {
 .clients-link:focus-within {
   fill: var(--button-backgroundnhover-color);
   border-color: var(--button-backgroundnhover-color);
+  transition: 250ms;
 }
 
 .socials-footer {
@@ -501,6 +503,7 @@ img {
 .social-link-footer:hover,
 .social-link-footer:focus {
   background-color: var(--button-backgroundnhover-color);
+  transition: 250ms;
 }
 
 /* FOOTER */
@@ -564,6 +567,7 @@ img {
 .contact-link-footer:hover,
 .contact-footer:focus {
   color: var(--button-backgroundnhover-color);
+  transition: 250ms;
 }
 
 .footer-socials {
@@ -601,4 +605,5 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--button-backgroundnhover-color);
+  transition: 250ms;
 }
