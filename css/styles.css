@@ -427,6 +427,12 @@ button:focus {
 
 .box {
   position: relative;
+  overflow: hidden;
+}
+
+.box:hover {
+  transform: translateY(0);
+  transition: transform 250ms ease;
 }
 
 .overlay {
@@ -434,10 +440,19 @@ button:focus {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: black;
+  height: 294px;
+  padding: 49px 45px 49px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--button-text-color);
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 28px;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms ease;
 }
-
 
 .card-link {
   text-decoration: none;
