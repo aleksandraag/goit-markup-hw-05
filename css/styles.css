@@ -751,6 +751,7 @@ img {
   position: absolute;
   width: 30px;
   height: 30px;
+  padding: 0;
   top: 8px;
   right: 8px;
   background-color: var(--button-text-color);
