@@ -12,6 +12,7 @@
   --headline-bottom-line: #ececec;
   --gradient: rgba(47, 48, 58, 0.4);
   --icons-color: #afb1b8;
+  --transition-fn: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Box-sizing for whole website */
@@ -712,42 +713,52 @@ img {
 }
 
 .backdrop {
-  position: absolute;
+  display: flex;
+  position: fixed;
+  background-size: cover;
   width: 100%;
   height: 100%;
   left: 0px;
   top: 0px;
+  right: 0px;
+  bottom: 0px;
   background: rgba(0, 0, 0, 0.2);
+  transition: visibility 250ms var(--transition-fn),
+    opacity 250ms var(--transition-fn);
+  z-index: 3;
 }
 
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: visibility 250ms linear, opacity 250ms linear;
 }
 
 .modal {
-  position: absolute;
-  display: flex;
+  position: relative;
   width: 528px;
   height: 581px;
-  left: 50%;
-  top: 70%;
-  transform: translate(-50%, -50%);
+  background-color: var(--button-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  background-color: var(--button-text-color);
+  margin: auto;
+  transition: transform 250ms var(--transition-fn);
 }
 
 .close-btn {
   position: absolute;
-  top: 8px;
-  right: 8px;
   width: 30px;
   height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border: solid 1px var(--icons-color);
+  top: 8px;
+  right: 8px;
+  background-color: var(--button-text-color);
+  border: 1px solid var(--icons-color);
+  box-sizing: border-box;
+  cursor: pointer;
   border-radius: 50%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
